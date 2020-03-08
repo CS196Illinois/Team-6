@@ -1,0 +1,30 @@
+body {
+    width: 600px;
+    margin: 0 auto;
+    padding: 0 50px 20 px;
+    border: black 2px solid;
+}
+
+.boxes {
+    border-color: black;
+    border-style: solid;
+    border-width: 2px;
+}
+
+#pictureDropBox {
+    width: 175px;
+    height: 75px;
+    margin: 50px auto;
+}
+
+#pictureDisplayBox {
+    width: 175px;
+    height: 75px;
+    margin: 50px auto;
+    padding: 50px 70px;
+}
+
+#getInfo {
+    text-align: center;
+    margin: 0px 0px 30px 0px;
+}
