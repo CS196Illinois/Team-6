@@ -12,7 +12,7 @@ import torch.nn.functional as F
 
 data_base = "/Users/ahmed/Desktop/Cars/"
 
-
+#trying git out
 #Set Up train Baloney
 transform_train = transforms.Compose([ transforms.Resize(256),transforms.RandomCrop(256), transforms.ToTensor(), transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))])
 dataset_train =  torchvision.datasets.ImageFolder(root= data_base + "train" , transform = transform_train)
