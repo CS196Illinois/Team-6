@@ -6,13 +6,33 @@
         <link href="styles/style.css" rel="stylesheet">
     </head>
     <body>
-        <div id="pictureDropBox" class="boxes"></div>
-        <br>
-        <div id="pictureDisplayBox" class="boxes"></div>
-
-        <div id="getInfo">
-            <button id = "getInfoButton" >Get Information</button>
-        </div>
+        <header>
+            <div style="overflow: hidden;">
+                <img src="images/logo.ico" id="logo" alt="logo of the website">
+                <p id="headline">AutoVision</p>
+            </div>
+        </header>
+        <nav>    
+            <ul class="navigation-bar">    
+                <li class="navigation-button"><a href="index.html" class="active">Home</a></li>
+                <li class="navigation-button" id="contact"><a href="contact-page.html">Contact</a></li>
+                <li class="navigation-button" id="about"><a href="about-page.html">About</a></li>
+            </ul>
+        </nav>
+        <main>    
+            <div id="main-content">
+                <div id='bg-image'></div>
+                <div id="pictureDropBox"></div>
+                <div id="description">
+                    Trying to figure out the type of a car?
+                    <br>
+                    Wanna know some data about a car?
+                    <br>
+                    <span class="enlarge">Upload the photo and Classify here</span>   
+                </div>
+                <div id="classify-button"><a href="analysis-page.html">Classify</a></div>
+            </div>
+        </main>
         <script src="scripts/main.js"></script>
     </body>
 </html>
