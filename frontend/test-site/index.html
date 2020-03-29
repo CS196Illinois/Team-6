@@ -12,27 +12,34 @@
                 <p id="headline">AutoVision</p>
             </div>
         </header>
-        <nav>    
-            <ul class="navigation-bar">    
-                <li class="navigation-button"><a href="index.html" class="active">Home</a></li>
-                <li class="navigation-button" id="contact"><a href="contact-page.html">Contact</a></li>
-                <li class="navigation-button" id="about"><a href="about-page.html">About</a></li>
+
+        <nav>
+            <ul id="navigation-bar">    
+                        <li class="navigation-button"><a href="index.html" class="active">Home</a></li>
+                        <li class="navigation-button" id="contact"><a href="contact-page.html">Contact</a></li>
+                        <li class="navigation-button" id="about"><a href="about-page.html">About</a></li>
             </ul>
         </nav>
-        <main>    
-            <div id="main-content">
-                <div id='bg-image'></div>
-                <div id="pictureDropBox"></div>
-                <div id="description">
-                    Trying to figure out the type of a car?
-                    <br>
-                    Wanna know some data about a car?
-                    <br>
-                    <span class="enlarge">Upload the photo and Classify here</span>   
-                </div>
-                <div id="classify-button"><a href="analysis-page.html">Classify</a></div>
+
+        <main>
+            <div id='bg-image'></div>
+            <div id="pictureDropBox">
+                <form action="" method="POST" enctype="multipart/form-data">
+                    <input type="file" id="img-find-button" name="img" accept="image/*" onchange="loadFile(event)" style="display: none;">
+                    <label for="img-find-button">+</label>
+                    <img id="img-output">
+                    <input type="submit" value="Classify" id="classify-button">
+                </form>
+            </div>
+            <div id="description">
+                Trying to figure out the type of a car?
+                <br>
+                Wanna know some data about a car?
+                <br>
+                <span class="enlarge">Upload the photo and Classify here</span>   
             </div>
         </main>
+
         <script src="scripts/main.js"></script>
     </body>
 </html>

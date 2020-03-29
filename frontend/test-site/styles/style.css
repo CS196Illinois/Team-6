@@ -11,14 +11,14 @@ body{
     font-size: 30px;
 }
 
-nav{
+nav {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
     z-index: 1;
 }
 
-#navigation-bar{
+#navigation-bar {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -41,7 +41,7 @@ nav{
     background-color: limegreen;
 }
 
-li.navigation-button a{
+.navigation-button a{
     font-size: 20px;
     display: block;
     color: white;
@@ -50,11 +50,11 @@ li.navigation-button a{
     padding: 14px 16px;
 }
 
-li.navigation-button a:hover:not(.active){
+.navigation-button a:hover:not(.active){
     background-color: dimgray;
 }
 
-#main-content {
+main {
     position: relative;
 }
 
@@ -67,12 +67,62 @@ li.navigation-button a:hover:not(.active){
 
 #pictureDropBox {
     width: 400px;
-    height: 240px;
+    height: 480px;
     position: -webkit-sticky;
     position: absolute;
     top: 280px;
     right: 210px;
-    border: black solid 5px;
+    background-color: white;
+    opacity: 70%;
+}
+#img-find-button{
+    /*Setting the property values to zero ends up throwing the element out of tab party in some browsers. 
+    And position: absolute guarantees the element does not interfere with the sibling elements.*/
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+}    
+#img-find-button + label{
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}
+#img-find-button + label:hover{
+    background-color: dimgray;
+}
+#img-output{
+    width: 350px;
+    height: 300px;
+    position: absolute;
+    top: 65px;
+    left: 50%;
+    margin-left: -175px;
+    border: wheat 1px solid;
+}
+#classify-button{
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    margin-left: -52.78px;
+    background-color: black;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    padding: 14px 20px;
+    cursor: pointer;
+}
+#classify-button:hover{
+    background-color: dimgray;
 }
 
 #description {
@@ -89,20 +139,4 @@ li.navigation-button a:hover:not(.active){
 .enlarge {
     font-size: 50px;
     font-weight: bold;
-}
-
-#classify-button {
-    position: absolute;
-    bottom: 320px;
-    right: 350px;
-}
-
-#classify-button a{
-    font-size: 20px;
-    display: block;
-    background-color: red;
-    text-align: center;
-    padding: 14px 20px;
-    color: white;
-    text-decoration: none;
 }
