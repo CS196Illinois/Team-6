@@ -1,0 +1,79 @@
+body{
+    margin: 0;
+}
+#logo{
+    width: 90px;
+    height: 90px;
+    float: left;
+    padding: 0px 15px 0px 0px;
+}
+#headline{
+    font-size: 30px;
+}
+
+nav {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+#navigation-bar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:rgb(2, 2, 2);
+}
+
+.navigation-button{
+    float: left;
+}
+
+#about{
+    float: right;
+}
+#contact{
+    float: right;
+}
+
+.active{
+    background-color: limegreen;
+}
+
+.navigation-button a{
+    font-size: 20px;
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    padding: 14px 16px;
+}
+
+.navigation-button a:hover:not(.active){
+    background-color: dimgray;
+}
+
+main {
+    position: relative;
+}
+
+#bg-image {
+    background-image: url(../images/backgroundPicture.png);
+    height: 1000px;
+    background-repeat: no-repeat;
+    filter: blur(7px);
+}
+
+#data {
+    width: 400px;
+    height: 480px;
+    position: -webkit-sticky;
+    position: absolute;
+    top: 280px;
+    right: 50%;
+    margin-right: -205px;
+    background-color: white;
+    opacity: 70%;
+    padding: 10px;
+}

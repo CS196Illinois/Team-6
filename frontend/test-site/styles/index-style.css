@@ -76,13 +76,20 @@ main {
     opacity: 70%;
 }
 #img-find-button{
-    /*Setting the property values to zero ends up throwing the element out of tab party in some browsers. 
-    And position: absolute guarantees the element does not interfere with the sibling elements.*/
+    /*
+    Setting the property values to zero ends up throwing the element out of tab party in some browsers. 
+    And position: absolute guarantees the element does not interfere with the sibling elements.
+    */
     width: 0.1px;
     height: 0.1px;
     opacity: 0;
     position: absolute;
     z-index: -1;
+
+    /* 
+    Or
+    display: none;
+    */
 }    
 #img-find-button + label{
     background-color: black;
@@ -139,4 +146,17 @@ main {
 .enlarge {
     font-size: 50px;
     font-weight: bold;
+}
+
+#dataBox {
+    width: 400px;
+    height: 480px;
+    position: -webkit-sticky;
+    position: absolute;
+    top: 280px;
+    right: 50%;
+    margin-right: -205px;
+    background-color: white;
+    opacity: 70%;
+    padding: 10px;
 }
