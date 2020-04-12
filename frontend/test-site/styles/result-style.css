@@ -65,7 +65,7 @@ main {
     filter: blur(7px);
 }
 
-#data {
+#dataBox {
     width: 400px;
     height: 480px;
     position: -webkit-sticky;
