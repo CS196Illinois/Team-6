@@ -151,7 +151,6 @@ main {
 #dataBox {
     width: 400px;
     height: 480px;
-    position: -webkit-sticky;
     position: absolute;
     top: 280px;
     right: 50%;
