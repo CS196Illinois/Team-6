@@ -1,0 +1,160 @@
+body{
+    margin: 0;
+}
+#logo{
+    width: 90px;
+    height: 90px;
+    float: left;
+    padding: 0px 15px 0px 0px;
+}
+#headline{
+    font-size: 30px;
+}
+
+nav {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+#navigation-bar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:rgb(2, 2, 2);
+}
+
+.navigation-button{
+    float: left;
+}
+
+#about{
+    float: right;
+}
+#contact{
+    float: right;
+}
+
+.active{
+    background-color: limegreen;
+}
+
+.navigation-button a{
+    font-size: 20px;
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    padding: 14px 16px;
+}
+
+.navigation-button a:hover:not(.active){
+    background-color: dimgray;
+}
+
+main {
+    position: relative;
+}
+
+#bg-image {
+	max-width: 100%;
+	height: auto;
+}
+
+#pictureDropBox {
+    width: 400px;
+    height: 480px;
+    position: -webkit-sticky;
+    position: absolute;
+    top: 280px;
+    right: 210px;
+    background-color: white;
+    opacity: 70%;
+}
+#img-find-button{
+    /*
+    Setting the property values to zero ends up throwing the element out of tab party in some browsers. 
+    And position: absolute guarantees the element does not interfere with the sibling elements.
+    */
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+
+    /* 
+    Or
+    display: none;
+    */
+}    
+#img-find-button + label{
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}
+#img-find-button + label:hover{
+    background-color: dimgray;
+}
+#img-output{
+    width: 350px;
+    height: 300px;
+    position: absolute;
+    top: 65px;
+    left: 50%;
+    margin-left: -175px;
+    border: wheat 1px solid;
+}
+#classify-button{
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    margin-left: -52.78px;
+    background-color: black;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    padding: 14px 20px;
+    cursor: pointer;
+}
+#classify-button:hover{
+    background-color: dimgray;
+}
+
+#description {
+    width: 380px;
+    height: 400px;
+    position: absolute;
+    top: 360px;
+    left: 300px;
+    color: white;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.enlarge {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+#dataBox {
+    width: 400px;
+    height: 480px;
+    position: -webkit-sticky;
+    position: absolute;
+    top: 280px;
+    right: 50%;
+    margin-right: -205px;
+    background-color: white;
+    opacity: 70%;
+    padding: 10px;
+}

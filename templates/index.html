@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Car Classification</title>
+        <link href="images/logo.ico" rel="icon">  
+		<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/index-style.css') }}">
+        <!-- <script src="{{url_for('static', filename='index-script.js')}}"></script> -->
+    </head>
+    <body>
+        <header>
+            <div style="overflow: hidden;">
+                <img src="/static/logo.ico"  alt="logo of the website">
+                <p id="headline">AutoVision</p>
+            </div>
+        </header>
+
+        <nav>
+            <ul id="navigation-bar">    
+                        <li class="navigation-button" id="index"><a href="index.html" class="active">Home</a></li>
+                        <li class="navigation-button" id="result"><a href="result.html">Result</a></li>
+                        <li class="navigation-button" id="contact"><a href="contact.html">Contact</a></li>
+                        <li class="navigation-button" id="about"><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            
+			<img id='big-image' src="{{ url_for('static', filename='images/cybertruck.jpg') }}">
+			</img>
+			
+            <div id="pictureDropBox">
+                <form action="#" method="post">
+                    <input type="file" id="img-find-button" name="img" accept="image/*">
+					<input type="submit" value="submit-image">
+                    <label for="img-find-button">+</label>
+                    <img id="img-output">
+                    <input type="submit" value="Classify" id="classify-button">
+                </form>
+            </div>
+            <div id="description">
+                Trying to figure out the type of a car?
+                <br>
+                Wanna know some data about a car?
+                <br>
+                <span class="enlarge">Upload the photo and Classify here</span>   
+            </div>
+        </main>
+
+    </body>
+</html>
