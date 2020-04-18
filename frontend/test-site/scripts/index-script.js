@@ -49,7 +49,7 @@ classifyButton.onclick = function() {
 
 //Helper function to display extracted data.
 function display(jsonObject) {
-    //Make "description" and "pictureDropBox" disaapear.
+    //Make "description" and "pictureDropBox" disappear.
     const description = document.getElementById("description");
     description.style.display = "none";
     const pictureDropBox = document.getElementById("pictureDropBox");
