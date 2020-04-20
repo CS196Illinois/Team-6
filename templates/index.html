@@ -3,14 +3,14 @@
     <head>
         <meta charset="utf-8">
         <title>Car Classification</title>
-        <link href="images/logo.ico" rel="icon">  
+        <link href="{{ url_for('static',filename='images/logo.ico') }}" rel="icon">  
 		<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/index-style.css') }}">
-        <!-- <script src="{{url_for('static', filename='index-script.js')}}"></script> -->
+        <script src="{{ url_for('static', filename='scripts/index-script.js') }}" defer></script>
     </head>
     <body>
         <header>
             <div style="overflow: hidden;">
-                <img src="/static/logo.ico"  alt="logo of the website">
+                <img src="{{ url_for('static', filename='images/logo.ico') }}"  alt="logo" id="logo">
                 <p id="headline">AutoVision</p>
             </div>
         </header>
@@ -25,15 +25,15 @@
         </nav>
 
         <main>
-            
-			<img id='big-image' src="{{ url_for('static', filename='images/cybertruck.jpg') }}">
-			</img>
+            <div>
+                <img id='bg-image' src="{{ url_for('static', filename='images/cybertruck.jpg') }}">
+            </div>
 			
             <div id="pictureDropBox">
                 <form action="#" method="post">
                     <input type="file" id="img-find-button" name="img" accept="image/*">
-					<input type="submit" value="submit-image">
                     <label for="img-find-button">+</label>
+					<!--<input type="submit" value="submit-image">-->
                     <img id="img-output">
                     <input type="submit" value="Classify" id="classify-button">
                 </form>

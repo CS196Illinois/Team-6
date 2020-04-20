@@ -10,42 +10,52 @@ plusButton.onchange = function () {
     reader.readAsDataURL(file);
 } 
 
-// Send a post request
+// Pop up an alert and prevent sending the request if no image is chosen
 const classifyButton = document.getElementById("classify-button");
-classifyButton.onclick = function() {
-    // Pop up an alert if no image is chosen.
-    const uploadImg = document.getElementById("img-output");
+const uploadImg = document.getElementById("img-output");
+classifyButton.onclick = function () {
     if (uploadImg.src === "") {
+        event.preventDefault();
         alert("You must choose an image to classify.");
         return;
     }
-
-    var xhr = new XMLHttpRequest();
-    // url ??????
-    xhr.open('POST', url, true);
-    xhr.responseType = 'json';
-    xhr.onload = function() {
-        // if the operation is completed
-        if (this.readyState === xhr.DONE) {
-            var dataAsJson = xhr.response;
-            // Display JsonObject in a readable way
-            display(dataAsJson);
-        }
-    }
-
-    // Get the file of the selected image
-    var image = plusButton.files[0];
-    // Convert the image into URL
-    var reader = new FileReader();
-    reader.onload = function() {
-        var imageURL = reader.result;
-        fileData.append('file', imageURL)
-    }
-    reader.readAsDataURL(image);
-    // Send the selected image to server
-    var fileData = new FormData();
-    xhr.send(fileData);
 }
+// // Send a post request
+// const classifyButton = document.getElementById("classify-button");
+// classifyButton.onclick = function() {
+//     // Pop up an alert if no image is chosen.
+//     const uploadImg = document.getElementById("img-output");
+//     if (uploadImg.src === "") {
+//         alert("You must choose an image to classify.");
+//         return;
+//     }
+
+//     var xhr = new XMLHttpRequest();
+//     // url ??????
+//     xhr.open('POST', url, true);
+//     xhr.responseType = 'json';
+//     xhr.onload = function() {
+//         // if the operation is completed
+//         if (this.readyState === xhr.DONE) {
+//             var dataAsJson = xhr.response;
+//             // Display JsonObject in a readable way
+//             display(dataAsJson);
+//         }
+//     }
+
+//     // Get the file of the selected image
+//     var image = plusButton.files[0];
+//     // Convert the image into URL
+//     var reader = new FileReader();
+//     reader.onload = function() {
+//         var imageURL = reader.result;
+//         fileData.append('file', imageURL)
+//     }
+//     reader.readAsDataURL(image);
+//     // Send the selected image to server
+//     var fileData = new FormData();
+//     xhr.send(fileData);
+// }
 
 //Helper function to display extracted data.
 function display(jsonObject) {

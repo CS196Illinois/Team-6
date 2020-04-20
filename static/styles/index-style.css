@@ -58,9 +58,10 @@ main {
     position: relative;
 }
 
-#bg-image {
-	max-width: 100%;
-	height: auto;
+#bg-image{
+    filter: blur(3px);
+    height: 900px;
+    width: 100%;
 }
 
 #pictureDropBox {
@@ -71,7 +72,7 @@ main {
     top: 280px;
     right: 210px;
     background-color: white;
-    opacity: 70%;
+    opacity: 85%;
 }
 #img-find-button{
     /*

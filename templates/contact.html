@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Car Classification</title>
+        <link href="{{ url_for('static', filename='images/logo.ico') }}" rel="icon">
+        <link href="{{ url_for('static', filename='styles/contact-style.css) }}" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <div style="overflow: hidden;">
+                <img src="{{ url_for('static', filename='images/logo.ico') }}"  alt="logo" id="logo">
+                <p id="headline">AutoVision</p>
+            </div>
+        </header>
+
+        <nav>
+            <ul id="navigation-bar">    
+                        <li class="navigation-button" id="index"><a href="{{ url_for('templates', filename='index.html') }}">Home</a></li>
+                        <li class="navigation-button" id="result"><a href="{{ url_for('templates', filename='result.html') }}">Result</a></li>
+                        <li class="navigation-button" id="contact"><a href="{{ url_for('contact') }}" class="active">Contact</a></li>
+                        <li class="navigation-button" id="about"><a href="{{ url_for('templates', filename='about.html') }}">About</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <div>
+                <img id='bg-image' src="{{ url_for('static', filename='images/cybertruck.jpg') }}">
+            </div>
+            
+            <div class="flex-container" id="flex-container-1">
+                
+                <div class="flipcard">
+                    <div class="flipcard-inner">
+                        <div class="flipcard-front">
+                            <img src="images/logo.ico" class="front-image">
+                        </div>
+                        <div class="flipcard-back">
+                            <h2 class="name">Name</h2>
+                            <address>
+                                <a href="mailto:example@gmail.com">example@gmail.com</a>
+                            </address>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flipcard">
+                    <div class="flipcard-inner">
+                        <div class="flipcard-front">
+                            <img src="images/logo.ico" class="front-image">
+                        </div>
+                        <div class="flipcard-back">
+                            <h2 class="name">Name</h2>
+                            <address>
+                                <a href="mailto:example@gmail.com">example@gmail.com</a>
+                            </address>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flipcard">
+                    <div class="flipcard-inner">
+                        <div class="flipcard-front">
+                            <img src="images/logo.ico" class="front-image">
+                        </div>
+                        <div class="flipcard-back">
+                            <h2 class="name">Name</h2>
+                            <address>
+                                <a href="mailto:example@gmail.com">example@gmail.com</a>
+                            </address>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex-container" id="flex-container-2">
+                <div class="flipcard">
+
+                </div>
+
+                <div class="flipcard">
+                    
+                </div>
+            </div>
+
+        </main>
+
+    </body>
+</html>
