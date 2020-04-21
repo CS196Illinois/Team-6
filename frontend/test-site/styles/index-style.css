@@ -159,3 +159,13 @@ main {
     opacity: 70%;
     padding: 10px;
 }
+#citation {
+    width: 1080px;
+    height: 200px;
+    position: absolute;
+    top: 900px;
+    left: 300px;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+}
