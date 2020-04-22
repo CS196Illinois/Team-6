@@ -76,20 +76,11 @@ main {
     opacity: 70%;
 }
 #img-find-button{
-    /*
-    Setting the property values to zero ends up throwing the element out of tab party in some browsers. 
-    And position: absolute guarantees the element does not interfere with the sibling elements.
-    */
     width: 0.1px;
     height: 0.1px;
     opacity: 0;
     position: absolute;
     z-index: -1;
-
-    /* 
-    Or
-    display: none;
-    */
 }    
 #img-find-button + label{
     background-color: black;
@@ -161,10 +152,11 @@ main {
 }
 #citation {
     width: 1080px;
-    height: 200px;
+    height: auto;
     position: absolute;
     top: 900px;
-    left: 300px;
+    left: 50%;
+    margin-left: -440px;
     color: white;
     font-size: 14px;
     font-weight: 600;
