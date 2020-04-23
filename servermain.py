@@ -10,11 +10,11 @@ def homepage():
 	else:
 		return render_template("index.html")
 
-@app.route("/results")
+@app.route("/results", methods=["GET"] )
 def imageprocessed():
 	return "<h1> test </h1>"
 
-@app.route("/contact")
+@app.route("/contact", methods=["GET"])
 def contact():
 	return render_template("contact.html")
 
