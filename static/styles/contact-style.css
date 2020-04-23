@@ -63,3 +63,66 @@ main {
     height: 900px;
     width: 100%;
 }
+
+.flex-container {
+    display: flex;
+    flex-flow: row wrap;
+    width: 80%;
+    left: 10%;
+    height: 300px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: transparent;
+}
+
+#flex-container-1 {
+    position: absolute;
+    top: 70px;
+}
+
+#flex-container-2 {
+    position: absolute;
+    top: 450px;
+    left: 23%;
+    width: 54%;
+}
+
+.flipcard {
+    height: 300px;
+    width: 300px;
+    perspective: 800px;
+    background-color: transparent;
+}
+.flipcard-inner {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    
+    transition: transform 1s;
+    transform-style: preserve-3d;
+
+}
+.flipcard:hover .flipcard-inner {
+    transform: rotateY(180deg);
+}
+.flipcard-front, .flipcard-back {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.flipcard-back {
+    background-color: #2980b9;
+    transform: rotateY(180deg);
+    text-align: center;
+    border-radius: 20px;
+}
+.front-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+.name {
+    text-align: center;
+}

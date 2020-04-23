@@ -18,7 +18,7 @@
             <ul id="navigation-bar">    
                         <li class="navigation-button" id="index"><a href="http://3.19.228.205:1234/">Home</a></li>
                         <li class="navigation-button" id="result"><a href="http://3.19.228.205:1234/results">Result</a></li>
-                        <li class="navigation-button" id="contact"><a href="http://3.19.228.205:1234/contact">Contact</a></li>
+                        <li class="navigation-button" id="contact"><a href="http://3.19.228.205:1234/contact" class="active">Contact</a></li>
                         <li class="navigation-button" id="about"><a href="http://3.19.228.205:1234/about">About</a></li>
             </ul>
         </nav>
@@ -75,12 +75,33 @@
 
             <div class="flex-container" id="flex-container-2">
                 <div class="flipcard">
-
+                    <div class="flipcard-inner">
+                        <div class="flipcard-front">
+                            <img src="{{ url_for('static', filename='images/logo.ico') }}" class="front-image">
+                        </div>
+                        <div class="flipcard-back">
+                            <h2 class="name">Name</h2>
+                            <address>
+                                <a href="mailto:lesniakphilip@dumbass.com">example@gmail.com</a>
+                            </address>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="flipcard">
-                    
+                    <div class="flipcard-inner">
+                        <div class="flipcard-front">
+                            <img src="{{ url_for('static', filename='images/logo.ico') }}" class="front-image">
+                        </div>
+                        <div class="flipcard-back">
+                            <h2 class="name">Name</h2>
+                            <address>
+                                <a href="mailto:lesniakphilip@dumbass.com">example@gmail.com</a>
+                            </address>
+                        </div>
+                    </div>
                 </div>
+                    
             </div>
 
         </main>
