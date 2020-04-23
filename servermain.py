@@ -18,6 +18,10 @@ def imageprocessed():
 def contact():
 	return render_template("contact.html")
 
+@app.route("/about", methods=["GET"])
+def contact():
+	return render_template("about.html")
+
 if __name__ == "__main__":
 	app.run(host='0.0.0.0', port=1234)
 	
