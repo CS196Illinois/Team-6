@@ -1,4 +1,9 @@
 from flask import Flask, render_template, request, redirect, url_for
+from fastai import *
+from fastai.vision import *
+from PIL import Image
+
+learn = load_learner(model.pkl)
 
 app = Flask(__name__)
 
@@ -6,6 +11,8 @@ app = Flask(__name__)
 def homepage():
 	if request.method == "POST":
 		inputimage = request.form["img"]
+		imageToPass = inputimage.convert();
+		pred = learn.predict(imageToPass)
 		return redirect(url_for("imageprocessed"))
 	else:
 		return render_template("index.html")
