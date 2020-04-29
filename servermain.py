@@ -18,7 +18,8 @@ app = Flask(__name__)
 def homepage():
 	if request.method == "POST":
 		inputimage = request.files["img"]
-		destination = "temp.jpg"
+		app.logger.info(accepted file)
+		destination = "/temp.jpg"
 		inputimage.save(destination)
 		pil_image = Image.open(inputimage)
 		imageToPass = pil_image.convert("rgb")
