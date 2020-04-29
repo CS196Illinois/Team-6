@@ -1,9 +1,15 @@
 from flask import Flask, render_template, request, redirect, url_for
-from fastai import *
-from fastai.vision import *
+import torch, torchvision
+from torch import nn
 from PIL import Image
 
-learn = load_learner(model.pkl)
+model = torchvision.models.resnet34(pretrained=False)
+num_feat = model.fc.in_features
+model.fc = nn.Linear(num_feat, 196)
+model.eval()
+
+state_dict = torch.load('AutoVisionV4.pth'), map_location = torch.device('cpu'))
+model.load_state_dict(state_dict)
 
 app = Flask(__name__)
 
