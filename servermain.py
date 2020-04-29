@@ -22,7 +22,7 @@ def homepage():
 		inputimage = request.files.get('img')
 		print("accepted file")
 		pil_image = Image.open(inputimage)
-		imageToPass = pil_image.convert("rgb")
+		imageToPass = pil_image.convert("RGB")
 		pred = model(imageToPass)
 		print(pred)
 		return redirect(url_for("imageprocessed"))
