@@ -18,7 +18,8 @@ app = Flask(__name__)
 def homepage():
 	if request.method == "POST":
 		inputimage = request.form["img"]
-		imageToPass = inputimage.convert();
+		pil_image = Image.open(inputimage)
+		imageToPass = pil_image.convert("rgb")
 		pred = model(imageToPass)
 		app.logger.info(pred)
 		return redirect(url_for("imageprocessed"))
