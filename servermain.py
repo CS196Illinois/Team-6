@@ -17,7 +17,7 @@ app = Flask(__name__)
 @app.route("/", methods=["POST", "GET"])
 def homepage():
 	if request.method == "POST":
-		inputimage = request.files["img"]
+		inputimage = request.image["img"]
 		pil_image = Image.open(inputimage)
 		imageToPass = pil_image.convert("rgb")
 		pred = model(imageToPass)
