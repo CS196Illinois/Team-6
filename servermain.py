@@ -27,7 +27,7 @@ def homepage():
 		imageToPassTensor = toTensor(imageToPass)
 		pred = model(imageToPassTensor[None, ...])
 		print(pred)
-		print(pred.grad_fn)
+		print(pred.grad_fn.data)
 		return redirect(url_for("imageprocessed"))
 	else:
 		return render_template("index.html")
