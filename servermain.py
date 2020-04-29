@@ -18,7 +18,7 @@ app = Flask(__name__)
 def homepage():
 	if request.method == "POST":
 		print("startedprocessing")
-		inputimage = request.files["img"]
+		inputimage = request.form.get("img")
 		print("accepted file")
 		destination = "/temp.jpg"
 		inputimage.save(destination)
