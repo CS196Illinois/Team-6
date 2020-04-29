@@ -30,6 +30,7 @@ def homepage():
 		pred = model(imageToPassTensor[None, ...])
 		print(pred)
 		prediction = str(torch.max(pred.data, 1))
+		print(prediction)
 		return redirect(url_for("imageprocessed"))
 	else:
 		return render_template("index.html")
