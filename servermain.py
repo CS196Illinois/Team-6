@@ -17,15 +17,15 @@ app = Flask(__name__)
 @app.route("/", methods=["POST", "GET"])
 def homepage():
 	if request.method == "POST":
-		app.logger.info("startedprocessing")
+		print("startedprocessing")
 		inputimage = request.files["img"]
-		app.logger.info("accepted file")
+		print("accepted file")
 		destination = "/temp.jpg"
 		inputimage.save(destination)
 		pil_image = Image.open(inputimage)
 		imageToPass = pil_image.convert("rgb")
 		pred = model(imageToPass)
-		app.logger.info(pred)
+		print(pred)
 		return redirect(url_for("imageprocessed"))
 	else:
 		return render_template("index.html")
