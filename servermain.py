@@ -29,8 +29,9 @@ def homepage():
 		imageToPassTensor = toTensor(imageToPass)
 		pred = model(imageToPassTensor[None, ...])
 		print(pred)
-		prediction = str(torch.max(pred.data, 1))
+		prediction = torch.max(pred.data, 1)
 		print(prediction.get('indicies').item())
+		prediction = str(prediction)
 		return redirect(url_for("imageprocessed"))
 	else:
 		return render_template("index.html")
