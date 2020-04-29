@@ -32,7 +32,7 @@ def homepage():
 		print(pred)
 		value, predictionlocal = torch.max(pred.data, 1)
 		print(predictionlocal.item())
-		prediction = str(predictionlocal)
+		prediction = str(predictionlocal.item())
 		return redirect(url_for("imageprocessed"))
 	else:
 		return render_template("index.html")
