@@ -17,8 +17,9 @@ app = Flask(__name__)
 @app.route("/", methods=["POST", "GET"])
 def homepage():
 	if request.method == "POST":
+		app.logger.info("startedprocessing")
 		inputimage = request.files["img"]
-		app.logger.info(accepted file)
+		app.logger.info("accepted file")
 		destination = "/temp.jpg"
 		inputimage.save(destination)
 		pil_image = Image.open(inputimage)
