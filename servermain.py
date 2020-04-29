@@ -23,7 +23,7 @@ def homepage():
 		print("accepted file")
 		pil_image = Image.open(inputimage)
 		imageToPass = pil_image.convert("RGB")
-		imageToPassTensor = transforms.ToTensor(imageToPass)
+		imageToPassTensor = torchvision.transforms.ToTensor(imageToPass)
 		pred = model(imageToPassTensor)
 		print(pred)
 		return redirect(url_for("imageprocessed"))
