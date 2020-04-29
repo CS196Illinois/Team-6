@@ -19,7 +19,8 @@ def homepage():
 	if request.method == "POST":
 		inputimage = request.form["img"]
 		imageToPass = inputimage.convert();
-		pred = learn.predict(imageToPass)
+		pred = model(imageToPass)
+		app.logger.info(pred)
 		return redirect(url_for("imageprocessed"))
 	else:
 		return render_template("index.html")
