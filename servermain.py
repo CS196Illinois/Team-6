@@ -25,7 +25,7 @@ def homepage():
 		imageToPass = pil_image.convert("RGB")
 		toTensor = torchvision.transforms.ToTensor()
 		imageToPassTensor = toTensor(imageToPass)
-		pred = model(data[None, imageToPassTensor])
+		pred = model([None, imageToPassTensor])
 		print(pred)
 		return redirect(url_for("imageprocessed"))
 	else:
