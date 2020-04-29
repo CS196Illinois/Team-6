@@ -12,6 +12,8 @@ state_dict = torch.load('AutoVisionV4.pth',
 map_location = torch.device('cpu'))
 model.load_state_dict(state_dict)
 
+prediction = 0
+
 app = Flask(__name__)
 
 @app.route("/", methods=["POST", "GET"])
@@ -27,14 +29,14 @@ def homepage():
 		imageToPassTensor = toTensor(imageToPass)
 		pred = model(imageToPassTensor[None, ...])
 		print(pred)
-		print(pred.grad_fn)
+		prediction = torch.max(pred.data, 1)
 		return redirect(url_for("imageprocessed"))
 	else:
 		return render_template("index.html")
 
 @app.route("/results", methods=["GET"] )
 def imageprocessed():
-	return "<h1> test </h1>"
+	return prediction
 
 @app.route("/contact", methods=["GET"])
 def contact():
