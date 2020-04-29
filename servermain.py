@@ -19,6 +19,7 @@ app = Flask(__name__)
 @app.route("/", methods=["POST", "GET"])
 def homepage():
 	if request.method == "POST":
+		global prediction
 		print("startedprocessing")
 		print(request.files)
 		inputimage = request.files.get('img')
@@ -31,7 +32,7 @@ def homepage():
 		print(pred)
 		value, predictionlocal = torch.max(pred.data, 1)
 		print(predictionlocal.item())
-		global prediction = str(predictionlocal)
+		prediction = str(predictionlocal)
 		return redirect(url_for("imageprocessed"))
 	else:
 		return render_template("index.html")
