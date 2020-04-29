@@ -8,7 +8,8 @@ num_feat = model.fc.in_features
 model.fc = nn.Linear(num_feat, 196)
 model.eval()
 
-state_dict = torch.load('AutoVisionV4.pth'), map_location = torch.device('cpu'))
+state_dict = torch.load('AutoVisionV4.pth', 
+map_location = torch.device('cpu'))
 model.load_state_dict(state_dict)
 
 app = Flask(__name__)
