@@ -23,7 +23,8 @@ def homepage():
 		print("accepted file")
 		pil_image = Image.open(inputimage)
 		imageToPass = pil_image.convert("RGB")
-		pred = model(imageToPass)
+		imageToPassTensor = transforms.ToTensor(imageToPass)
+		pred = model(imageToPassTensor)
 		print(pred)
 		return redirect(url_for("imageprocessed"))
 	else:
