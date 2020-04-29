@@ -21,8 +21,6 @@ def homepage():
 		print(request.files)
 		inputimage = request.files.get('img')
 		print("accepted file")
-		destination = "/temp.jpg"
-		inputimage.save(destination)
 		pil_image = Image.open(inputimage)
 		imageToPass = pil_image.convert("rgb")
 		pred = model(imageToPass)
