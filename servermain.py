@@ -115,7 +115,7 @@ NAMES = [
     'smart fortwo Convertible 2012',
 ]
 
-prediction = "0"
+prediction = 0
 
 app = Flask(__name__)
 
@@ -136,7 +136,7 @@ def homepage():
 		print(pred)
 		value, predictionlocal = torch.max(pred.data, 1)
 		print(predictionlocal.item())
-		prediction = str(predictionlocal.item())
+		prediction = int(predictionlocal.item())
 		return redirect(url_for("imageprocessed"))
 	else:
 		return render_template("index.html")
